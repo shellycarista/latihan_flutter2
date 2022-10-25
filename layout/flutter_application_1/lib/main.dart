@@ -27,14 +27,30 @@ class _MyAppState extends State<MyApp> {
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: <Widget>[
-              Container(),
-              Container(),
-              IntrinsicHeight(),
-            ],
-          )),
-          
-          
-                ),              
-          );
+              Container(
+                height: 200,
+                color: Colors.yellow,
+              ),
+              Container(
+                color: Colors.white,
+                width: double.infinity,
+                child: Text("Belajar KMMB - STIKOM Bali", textAlign: TextAlign.center,),
+              ),
+              IntrinsicHeight(
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Expanded(
+                      child: Container(
+                      color: Colors.orange,
+                      height: 150,
+                      )),
+                      Expanded(child: Container(color:  Colors.green,)),
+                  ]),
+                ),
+        ],
+          )), 
+                ));              
+
   }
 }
